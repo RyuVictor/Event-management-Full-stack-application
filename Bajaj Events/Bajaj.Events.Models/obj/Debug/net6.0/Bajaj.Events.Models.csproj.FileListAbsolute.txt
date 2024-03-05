@@ -1,0 +1,11 @@
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Models\bin\Debug\net6.0\Bajaj.Events.Models.deps.json
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Models\bin\Debug\net6.0\Bajaj.Events.Models.dll
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Models\bin\Debug\net6.0\Bajaj.Events.Models.pdb
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Models\obj\Debug\net6.0\Bajaj.Events.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Models\obj\Debug\net6.0\Bajaj.Events.Models.AssemblyInfoInputs.cache
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Models\obj\Debug\net6.0\Bajaj.Events.Models.AssemblyInfo.cs
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Models\obj\Debug\net6.0\Bajaj.Events.Models.csproj.CoreCompileInputs.cache
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Models\obj\Debug\net6.0\Bajaj.Events.Models.dll
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Models\obj\Debug\net6.0\refint\Bajaj.Events.Models.dll
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Models\obj\Debug\net6.0\Bajaj.Events.Models.pdb
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Models\obj\Debug\net6.0\ref\Bajaj.Events.Models.dll

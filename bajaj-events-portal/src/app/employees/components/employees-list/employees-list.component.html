@@ -1,0 +1,49 @@
+<ng-container *ngIf="employees && employees.length > 0; else NoDataTemplate">
+    <h1 [innerText]="title"></h1>
+    <hr />
+    <h6 [innerText]="subtitle"></h6>
+    <div class="container">
+      <input type="search" name="searchEmployee" id="searchEmployee" placeholder="Type characters to search your event!" class="form-control" [(ngModel)]="searchEmployeeCharacters" (keydown)="changePageNumber()">
+    </div>
+    <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th (click)="sortTable('employeeName')">Employee Name
+              <i class="fa" [ngClass]="{'fa-arrow-up': sortedColumn === 'employeeName' && isAscending, 'fa-arrow-down': sortedColumn === 'employeeName' && !isAscending}"></i>
+          </th>
+          <th (click)="sortTable('city')">Employee City
+              <i class="fa" [ngClass]="{'fa-arrow-up': sortedColumn === 'city' && isAscending, 'fa-arrow-down': sortedColumn === 'city' && !isAscending}"></i>
+          </th>
+          <th (click)="sortTable('email')">Email
+              <i class="fa" [ngClass]="{'fa-arrow-up': sortedColumn === 'email' && isAscending, 'fa-arrow-down': sortedColumn === 'email' && !isAscending}"></i>
+          </th>
+          <th (click)="sortTable('phone')">Employee Name
+              <i class="fa" [ngClass]="{'fa-arrow-up': sortedColumn === 'phone' && isAscending, 'fa-arrow-down': sortedColumn === 'phone' && !isAscending}"></i>
+          </th>
+          <th>Show Details</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of filterEventsByName()| paginate: { itemsPerPage: totalItemsPerPage, currentPage: currentPage }">
+              <td><span [innerText]="employee.employeeName"></span></td>
+              <td><span [innerText]="employee.city"></span></td>
+              <td><span [innerText]="employee.email"></span></td>
+              <td><span [innerText]="employee.phone"></span></td>
+              <td>
+                <button class="btn btn-success" (click)="onEmployeeSelection(employee.employeeId)">
+                  Show Details
+                </button>
+              </td>
+            </tr>
+          </tbody>
+    </table>
+    <hr/>
+    <div class="text-center"><pagination-controls (pageChange)="currentPage = $event"></pagination-controls></div>
+    <hr/>
+    <ng-container *ngIf="selectedEmployeeId > 0">
+      <bajaj-employee-details  [employeeId]="selectedEmployeeId" ></bajaj-employee-details>
+    </ng-container>
+</ng-container>
+<ng-template #NoDataTemplate>
+  <h3>Sorry we did not find any events right now please come back later</h3>
+</ng-template>

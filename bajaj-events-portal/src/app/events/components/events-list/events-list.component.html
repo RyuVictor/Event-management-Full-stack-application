@@ -1,0 +1,63 @@
+<ng-container *ngIf="events && events.length > 0; else NoDataTemplate">
+  <h1 [innerText]="title"></h1>
+  <hr />
+  <h6 [innerText]="subtitle"></h6>
+  <div class="container">
+    <input type="search" name="searchEvents" id="searchEvents" placeholder="Type characters to search your event!" class="form-control" [(ngModel)]="searchEventcharacters" (keydown)="changePageNumber()">
+  </div>
+  <table class="table table-hover table-striped ">
+    <thead class="text-center">
+      <tr>
+<th (click)="sortTable('eventCode')">Event Code
+                    <i class="fa" [ngClass]="{'fa-arrow-up': sortedColumn === 'eventCode' && isAscending, 'fa-arrow-down': sortedColumn === 'eventCode' && !isAscending}"></i>
+                </th>
+                <th (click)="sortTable('eventName')">Event Name 
+                    <i class="fa" [ngClass]="{'fa-arrow-up': sortedColumn === 'eventName' && isAscending, 'fa-arrow-down': sortedColumn === 'eventName' && !isAscending}"></i>
+                  </th>
+                  <th (click)="sortTable('startDate')">Start Date 
+                    <i class="fa" [ngClass]="{'fa-arrow-up': sortedColumn === 'startDate' && isAscending, 'fa-arrow-down': sortedColumn === 'startDate' && !isAscending}"></i>
+                  </th>
+                  <th (click)="sortTable('fees')">Fees 
+                    <i class="fa" [ngClass]="{'fa-arrow-up': sortedColumn === 'fees' && isAscending, 'fa-arrow-down': sortedColumn === 'fees' && !isAscending}"></i>
+                  </th>
+                  <th> Action </th>
+                  <th> Venue </th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr *ngFor="let event of filterEventsByName()| paginate: { itemsPerPage: totalItemsPerPage, currentPage: CurrentPage }">
+        <td><span [innerText]="event.eventCode | lowercase"></span></td>
+        <td><span [innerText]="event.eventName | uppercase"></span></td>
+        <td><span [innerText]="event.startDate | dateGlobalization : 'mr-IN'"></span></td>
+        <td><span [innerText]="event.fees | currency : 'EUR'"></span></td>
+        <td>
+          <!-- <button class="btn btn-success" (click)="onEventSelection(event.eventId)">
+            Show Details
+          </button> -->
+          <a [routerLink]="['/events', event.eventId]" class="btn btn-primary">Show Details</a>
+        </td>
+        <td>
+          <a href={{mapUrl}} class="btn btn-info" (click)="getMap(event)" target="_blank">Google Map</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr/>
+  <div class="text-center"><pagination-controls (pageChange)="CurrentPage = $event"></pagination-controls></div>
+  <!-- <hr/>
+  <ng-container *ngIf="selectedEventId > 0">
+    <bajaj-event-details  [eventId]="selectedEventId" ></bajaj-event-details>
+  </ng-container> -->
+</ng-container>
+<ng-template #NoDataTemplate>
+  <h3>Sorry we did not find any events right now please come back later</h3>
+</ng-template>
+
+
+
+        <!-- <th mat-sort-header="eventCode">Event Code</th>
+        <th mat-sort-header="eventName">Event Name</th>
+        <th >Start Date</th>
+        <th mat-sort-header="fees">Fees</th>
+        <th>Show Details</th>
+        <th>Venue</th> -->

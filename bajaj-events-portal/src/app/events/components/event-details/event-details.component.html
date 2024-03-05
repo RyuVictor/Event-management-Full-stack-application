@@ -1,0 +1,53 @@
+<ng-container *ngIf="event">
+    <h1>{{title+event.eventName}}</h1>
+    <table class="table table-hover table-striped">
+        <tbody>
+            <tr>
+                <th>Event Id</th>
+                <td><span [innerText]="event.eventId"></span></td>
+            </tr>
+            <tr>
+                <th>Event Code</th>
+                <td><span [innerText]="event.eventCode | lowercase"></span></td>
+            </tr>
+            <tr>
+                <th>Event Name</th>
+                <td><span [innerText]="event.eventName | uppercase"></span></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td><span [innerText]="event.description | titlecase"></span></td>
+            </tr>
+            <tr>
+                <th>Event Start Date</th>
+                <td><span [innerText]="event.startDate | date : 'dd-MMMM-yyyy '"></span></td>
+            </tr>
+            <tr>
+                <th>Event End Date</th>
+                <td><span [innerText]="event.endDate | date : 'dd-MMMM-yyyy'"></span></td>
+            </tr>
+            <tr>
+                <th>Event Fees</th>
+                <td><span [innerText]="event.fees | currency : 'EUR'"></span></td>
+            </tr>
+            <tr>
+                <th>Total Registrations</th>
+                <td><span [innerText]="event.seatsFilled"></span></td>
+            </tr>
+            <tr>
+                <th>Arranged By</th>
+                <td><span [innerText]="event.organizedBy"></span></td>
+            </tr>
+            <tr>
+                <th>Event Venue</th>
+                <td><span [innerText]="event.venue"></span></td>
+            </tr>
+            <tr>
+                <th>Event Logo</th>
+                <td>
+                    <img [src]="event.logo" [alt]="event.eventName">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>

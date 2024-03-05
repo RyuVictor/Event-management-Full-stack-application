@@ -1,0 +1,53 @@
+<ng-container *ngIf="employee">
+    <h1>{{title+employee.employeeName}}</h1>
+    <table class="table table-hover table-striped">
+        <tbody>
+            <tr>
+                <th>Employee ID</th>
+                <td><span [innerText]="employee.employeeId"></span></td>
+            </tr>
+            <tr>
+                <th>Employee Name</th>
+                <td><span [innerText]="employee.employeeName"></span></td>
+            </tr>
+            <tr>
+                <th>Skillset</th>
+                <td><span [innerText]="employee.skillsets"></span></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><span [innerText]="employee.email"></span></td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td><span [innerText]="employee.phone"></span></td>
+            </tr>
+            <tr>
+                <th><Address></Address></th>
+                <td><span [innerText]="employee.address"></span></td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td><span [innerText]="employee.city"></span></td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td><span [innerText]="employee.country"></span></td>
+            </tr>
+            <tr>
+                <th>Zipcode</th>
+                <td><span [innerText]="employee.zipcode"></span></td>
+            </tr>
+            <tr>
+                <th>Department</th>
+                <td><span [innerText]="employee.department"></span></td>
+            </tr>
+            <tr>
+                <th>Employee Logo</th>
+                <td>
+                    <img [src]="employee.avatar" [alt]="employee.employeeName">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>

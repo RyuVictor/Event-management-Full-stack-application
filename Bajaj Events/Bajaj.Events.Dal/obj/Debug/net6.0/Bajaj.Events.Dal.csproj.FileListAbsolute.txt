@@ -1,0 +1,17 @@
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\bin\Debug\net6.0\Bajaj.Events.Dal.deps.json
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\bin\Debug\net6.0\Bajaj.Events.Dal.dll
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\bin\Debug\net6.0\Bajaj.Events.Dal.pdb
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\obj\Debug\net6.0\Bajaj.Events.Dal.GeneratedMSBuildEditorConfig.editorconfig
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\obj\Debug\net6.0\Bajaj.Events.Dal.AssemblyInfoInputs.cache
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\obj\Debug\net6.0\Bajaj.Events.Dal.AssemblyInfo.cs
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\obj\Debug\net6.0\Bajaj.Events.Dal.csproj.CoreCompileInputs.cache
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\obj\Debug\net6.0\Bajaj.Events.Dal.dll
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\obj\Debug\net6.0\refint\Bajaj.Events.Dal.dll
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\obj\Debug\net6.0\Bajaj.Events.Dal.pdb
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\obj\Debug\net6.0\ref\Bajaj.Events.Dal.dll
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\bin\Debug\net6.0\Bajaj.Events.Dal.runtimeconfig.json
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\bin\Debug\net6.0\Bajaj.Events.Models.dll
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\bin\Debug\net6.0\Bajaj.Events.Models.pdb
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\obj\Debug\net6.0\Bajaj.Events.Dal.csproj.AssemblyReference.cache
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\obj\Debug\net6.0\Bajaj.Events.Dal.csproj.CopyComplete
+D:\Bajaj training\ASP.NET\ASP .NET Core Web API\Bajaj Events\Bajaj.Events.Dal\obj\Debug\net6.0\Bajaj.Events.Dal.genruntimeconfig.cache

@@ -1,0 +1,63 @@
+<div class="container" style="width: 40%">
+  <h1>{{ title }}</h1>
+  <hr />
+  <form (ngSubmit)="onAuthentication()" #loginForm="ngForm">
+    <fieldset>
+      <div class="form-group">
+        <label for="inputUserName" class="form-label mt-4"
+          >UserName/Email</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="inputUserName"
+          [(ngModel)]="user.userName"
+          placeholder="Enter your username or email!"
+          name="userName"
+          required
+          #userName="ngModel"
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="userName.invalid && (userName.dirty || userName.touched)"
+        >
+          <div *ngIf="userName.errors?.['required']">
+            Username/email feild is required
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword" class="form-label mt-4">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="inputPassword"
+          placeholder="Enter your Password!"
+          [(ngModel)]="user.password"
+          name="password"
+          required
+          minlength="4"
+          #password="ngModel"
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="password.invalid && (password.dirty || password.touched)"
+        >
+          <div *ngIf="password.errors?.['required']">
+            Password feild is required
+          </div>
+          <div *ngIf="password.errors?.['minlength']">
+            Password must be at least of 4 characters
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-dark" [disabled]="!loginForm.valid">
+        Login
+      </button>
+      <br />
+      <div class="alert alert-danger" *ngIf="errorMessage != ''">
+        {{ errorMessage }}
+      </div>
+    </fieldset>
+  </form>
+</div>

@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://www.bajajfinserv.in/" target="_blank"><img [src]="logo" alt="Bajaj EP" width="30%" style="border: 2px black solid;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active" >Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/employees']" routerLinkActive="active">Employees</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/events']" routerLinkActive="active">Events</a>
+          </li>
+          <li class="nav-item" *ngIf="isAuthenticated === true && role === 'Hr'">
+            <a class="nav-link" [routerLink]="['/events/new']" routerLinkActive="active">Register Event</a>
+          </li>
+          <li class="nav-item" *ngIf="isAuthenticated === false">
+            <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+          </li>
+          <li class="nav-item" *ngIf="isAuthenticated === true">
+            <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active" (click)="logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
